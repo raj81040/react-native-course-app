@@ -82,7 +82,7 @@ export default function HomeScreen() {
             className="bg-white w-[48%] p-5 rounded-2xl mb-4 items-center shadow-sm"
           >
             <View className="bg-orange-100 p-3 rounded-full mb-3">
-              <Ionicons name="notifications-outline" size={24}/>
+              <Ionicons name="notifications-outline" size={24} />
               {/* Red dot badge if there are alerts */}
               <View className="absolute top-0 right-0 w-3 h-3 bg-red-500 rounded-full border-2 border-white" />
             </View>
