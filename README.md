@@ -135,20 +135,43 @@ DummyJSON API:
 * Notifications are local only
 * Profile stats are mock data
 
----
 
+=======
 # 📸 Screenshots
 
-(Add screenshots here before submission)
+## 🔔 Notification Access
+![Notification Access](./assets/screenshots/notification1.png)
 
-* Login Screen
-* Register Screen
-* Home Screen
-* Course List
-* Course Details
-* WebView Screen
-* Profile Screen
-* Offline Banner
+## 🔐 Login Screen
+![Login Screen](./assets/screenshots/login.png)
+
+## ❌ Invalid Login
+![Invalid Login](./assets/screenshots/invalidlogin.png)
+
+## 📝 Register Screen
+![Register Screen](./assets/screenshots/register.png)
+
+## 🏠 Home Screen
+![Home Screen](./assets/screenshots/dashboard.png)
+
+## 📚 Course Catalog
+![Course Catalog](./assets/screenshots/courcecatelog.png)
+
+## 🌐 WebView Course Content
+![WebView Course Content](./assets/screenshots/courcecontent.png)
+
+## 👤 Profile Screen
+![Profile Screen](./assets/screenshots/profile.png)
+
+## 🖼️ Image Selection
+![Image Selection](./assets/screenshots/selectimage.png)
+
+## 🔖 Bookmark Notification
+![Bookmark Notification](./assets/screenshots/notificationcource.png)
+
+## ⏳ Course Loader
+![Course Loader](./assets/screenshots/courceloader.png)
+
 
 ---
 
