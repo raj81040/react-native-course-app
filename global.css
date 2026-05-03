@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 255 255 255;
+    --foreground: 0 0 0;
+    --primary: 37 99 235; /* Example Blue */
+    --primary-foreground: 255 255 255;
+    /* Add others you defined in tailwind.config.js */
+  }
+}
