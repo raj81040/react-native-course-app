@@ -83,15 +83,15 @@ LegendList
 
 ### 🏠 Dashboard & Courses
 ![Dashboard](app/assets/screenshots/dashboard.png)
-![Course Catalog](app/assets/screenshots/coursecatalog.png)
-![Course Loader](app/assets/screenshots/courseloader.png)
+![Course Catalog](app/assets/screenshots/courcecatelog.png)
+![Course Loader](app/assets/screenshots/courceloader.png)
 
 ### 📖 Course Content
-![Course Content](app/assets/screenshots/coursecontent.png)
+![Course Content](app/assets/screenshots/courcecontent.png)
 
 ### 🔔 Notifications
 ![Permission](app/assets/screenshots/notification1.png)
-![Notification](app/assets/screenshots/notificationcourse.png)
+![Notification](app/assets/screenshots/notificationcource.png)
 
 ### 👤 Profile
 ![Profile](app/assets/screenshots/profile.png)
