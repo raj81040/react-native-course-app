@@ -1,146 +1,224 @@
-# 📱 React Native Course App (Assessment Project)
+Mini LMS Mobile App (React Native Expo)
 
 Hey 👋
-This is a React Native app built using **Expo + TypeScript** as part of an assessment project.
+This is a production-ready Mini LMS mobile application built using React Native Expo + TypeScript as part of a developer assessment.
 
-The app simulates a simple e-learning platform where users can log in, browse courses, bookmark them, and view course content inside a WebView.
+The app demonstrates real-world mobile development practices including authentication, WebView integration, offline handling, notifications, and performance optimization.
+
+🚀 Overview
+
+This project focuses on:
+
+Bridging native & web content (WebView)
+Managing secure authentication & persistence
+Building scalable and optimized UI
+Handling real-world edge cases (offline, errors, retries)
+
+
+✨ Features
+
+🔐 Authentication
+Login & Register using API
+Secure token storage using Expo SecureStore
+Auto-login on app restart
+Logout functionality
+Invalid login handling
+
+
+📚 Course Catalog
+Fetch courses & instructors from API
+Search courses by title
+Bookmark functionality
+Pull-to-refresh
+Optimized rendering using LegendList
+
+
+📖 Course Details
+Detailed course screen
+Instructor info
+Bookmark toggle
+Enroll button (UI)
+
+
+🌐 WebView Integration
+Dynamic course content rendering
+Native → WebView data passing
+Custom HTML template rendering
+
+
+🔔 Notifications
+Permission handling (Allow / Deny)
+Notification on bookmarking 5+ courses
+Inactive user reminder (24 hours)
+Navigation via notification click
+
+
+📶 Offline Support
+Network detection using NetInfo
+Offline banner UI
+Graceful API failure handling
+⚡ Performance Optimization
+Used LegendList for better performance
+Memoization using useCallback
+Clean modular architecture
+🧱 Tech Stack
+React Native (Expo SDK)
+TypeScript (Strict Mode)
+Expo Router
+Zustand (State Management)
+NativeWind (Styling)
+Expo SecureStore
+AsyncStorage
+Expo Notifications
+NetInfo
+LegendList
+
+
+## 📱 Screenshots
+
+### 🔐 Authentication
+![Login](app/assets/screenshots/login.png)
+![Register](app/assets/screenshots/register.png)
+![Invalid Login](app/assets/screenshots/invalidlogin.png)
+
+### 🏠 Dashboard & Courses
+![Dashboard](app/assets/screenshots/dashboard.png)
+![Course Catalog](app/assets/screenshots/coursecatalog.png)
+![Course Loader](app/assets/screenshots/courseloader.png)
+
+### 📖 Course Content
+![Course Content](app/assets/screenshots/coursecontent.png)
+
+### 🔔 Notifications
+![Permission](app/assets/screenshots/notification1.png)
+![Notification](app/assets/screenshots/notificationcourse.png)
+
+### 👤 Profile
+![Profile](app/assets/screenshots/profile.png)
+![Select Image](app/assets/screenshots/selectimage.png)
+
+
+# 🚀 Project Setup (Run Locally)
+
+Follow these steps to run the app on your local machine.
 
 ---
 
-# 🚀 Features
+## 📦 Prerequisites
 
-## 🔐 Authentication
+Make sure you have installed:
 
-* Login and Register screens (dummy authentication using API)
-* Token stored securely using Expo SecureStore
-* Auto login when app restarts
-* Logout functionality
-
----
-
-## 📚 Course Catalog
-
-* Fetch courses from DummyJSON API
-* Fetch users as instructors
-* Search courses by title
-* Bookmark courses
-* Pull to refresh support
-* Optimized list rendering using LegendList
+* Node.js (v18 or later)
+* npm or yarn
+* Git
+* Android Studio (for emulator)
 
 ---
 
-## 📖 Course Details
+## 📥 Clone the Repository
 
-* Full course information screen
-* Instructor details
-* Course description
-* Bookmark toggle
-* Enroll button (UI only)
-
----
-
-## 🌐 WebView Integration
-
-* Each course has a WebView screen
-* Displays course content using dynamic HTML
-* Native app passes data to WebView via route params and headers
-
----
-
-## 🔔 Notifications
-
-* Local notifications using Expo Notifications
-* Trigger notification when user bookmarks 5+ courses
-* Reminder notification if user is inactive for 24 hours
-
----
-
-## 📶 Offline Support
-
-* Detects internet connection using NetInfo
-* Shows offline banner when user is disconnected
-
----
-
-## ⚡ Performance Improvements
-
-* Used LegendList instead of FlatList for better performance
-* Memoized list items using useCallback
-* Clean component-based architecture
-
----
-
-# 🧱 Tech Stack
-
-* React Native (Expo SDK)
-* TypeScript
-* Expo Router (navigation)
-* Zustand (state management)
-* NativeWind (Tailwind styling)
-* Expo SecureStore (secure token storage)
-* AsyncStorage (local persistence)
-* Expo Notifications (local notifications)
-* NetInfo (network detection)
-* LegendList (optimized list rendering)
-
----
-
-# 📂 Project Structure
-
-```txt
-app/                 → Screens (Expo Router)
-src/
- ├── components/     → Reusable UI components
- ├── store/          → Zustand state management
- ├── services/       → API calls
- ├── utils/          → Helpers
+```bash
+git clone https://github.com/raj81040/react-native-course-app.git
+cd react-native-course-app
 ```
 
 ---
 
-# ⚙️ Setup Instructions
-
-## 1. Install dependencies
+## 📦 Install Dependencies
 
 ```bash
 npm install
 ```
 
-## 2. Start project
+---
+
+## ▶️ Run the App (Expo)
+
+Start the development server:
+
+```bash
+npx expo start --go
+```
+
+---
+
+## 📱 Run on Android Emulator
+
+* Open Android Studio
+* Start an emulator
+* Press `a` in terminal
+
+---
+
+## 📱 Run on Physical Device
+
+* Install Expo Go app from Play Store
+* Scan the QR code shown in terminal/browser
+
+---
+
+## ⚠️ Important Notes
+
+* This project uses **Expo**
+* Push notifications **do NOT work in Expo Go (SDK 53+)**
+* To test notifications, you need a **development build**
+
+---
+
+## 🔧 (Optional) Run with Development Build
+
+```bash
+npm install -g eas-cli
+eas login
+eas build:configure
+eas build -p android --profile development
+```
+
+Install the generated APK and then run:
 
 ```bash
 npx expo start
 ```
 
-In the output, you'll find options to open the app in a
+---
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+## 🧹 Clear Cache (if errors occur)
 
 ```bash
-npm run reset-project
+npx expo start --clear
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+---
 
-## Learn more
+## 📂 Project Structure (Basic)
 
-To learn more about developing your project with Expo, look at the following resources:
+```
+react-native-course-app/
+│── app/
+│── assets/
+│── components/
+│── node_modules/
+│── package.json
+```
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+---
 
-## Join the community
+## 💡 Common Issues
 
-Join our community of developers creating universal apps.
+### Notifications not working
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+* Works only on real device + development build
+
+### App not opening on emulator
+
+```bash
+adb devices
+```
+
+Make sure emulator is running.
+
+---
+
+## 👨‍💻 Author
+
+Raj Tiwari
